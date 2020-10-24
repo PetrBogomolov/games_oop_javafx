@@ -33,7 +33,7 @@ public class Puzzle extends Application {
         rect.setWidth(size);
         rect.setFill(Color.WHITE);
         rect.setStroke(Color.BLACK);
-        return rect;
+        return rect;  
     }
 
     private Rectangle buildFigure(int x, int y, int size, String image) {
