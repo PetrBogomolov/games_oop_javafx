@@ -15,11 +15,7 @@ public final class Logic {
     public boolean move(Cell source, Cell dest)
             throws FigureNotFoundException, ImpossibleMoveException, OccupiedCellException {
         boolean result = false;
-        int index = - 1;
-        index = findBy(source);
-        if (index == - 1) {
-            throw new FigureNotFoundException("Figure not found");
-        }
+        int index = findBy(source);
         Cell[] steps = figures[index].way(source, dest);
         if (!free(steps)) {
             throw new OccupiedCellException("Cell occupied");
